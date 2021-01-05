@@ -1,0 +1,139 @@
+body {
+    font-family: helvetica, calibri, arial, sans-serif;
+}
+
+div.slide {
+    -webkit-box-shadow: 0 0 50px #c0c0c0;
+    -moz-box-shadow: 0 0 50px #c0c0c0;
+    box-shadow: 0 0 50px #c0c0c0;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    height: 700px;
+    padding: 20px;
+    position: relative;
+    width: 900px;
+
+    color: #121B28;
+    font-size: 22pt;
+    line-height: 30pt;
+}
+    div.inactiveslide {
+        opacity: 0.4;
+    }
+    div.activeslide {
+        opacity: 1;
+    }
+
+div.footer,p.footer {
+    bottom: 20px;
+    color: #404040;
+    font-family: arial;
+    font-size: 26px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+pre {
+    font-family: monospace;
+    font-size: 16pt;
+    letter-spacing: -1px;
+    line-height: 20pt;
+    overflow: auto;
+    background: #eee;
+}
+    pre:focus {
+        outline: 0;
+    }
+
+p, pre {
+    margin: .5em 0 .1em 0;
+}
+
+a {
+    color: #75B143;
+}
+
+h1 {
+    color: #121B28;
+    font-family: 'Ubuntu', helvetica, trebuchet ms, serif;
+    font-size: 34pt;
+    margin-bottom: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+h1.center {
+    margin-top: 30%;
+    font-size: 150%;
+}
+
+p.center {
+    text-align: center;
+}
+
+/* Images */
+
+img.border {
+    border: 1px solid #ccc;
+}
+
+img.fill {
+    width: 95%;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tables */
+
+table.table thead td {
+    font-weight: bold;
+}
+
+table.table td {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+
+table.table td {
+   padding: 5px;
+}
+
+div.slide .run-button {
+  float: right;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-bottom: 6px;
+  margin-left: 10px;
+}
+
+/* Notes */
+
+div.slide .notes {
+  display: none;
+  background-color: #CCC;
+  z-index: 99999;
+  bottom: 0px;
+  position: absolute;
+  font-size: 14px;
+  line-height: 1.2em;
+  border: 1px dotted black;
+  width: 885px;
+  padding: 6px;
+}
+
+.notes-button {
+  position: fixed;
+  right: 30px;
+  bottom: 10px;
+}
+

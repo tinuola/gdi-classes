@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Intro to JavaScript - Girl Develop It</title>
+
+    <meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="dist/css/reveal.css">
+    <link rel="stylesheet" href="dist/css/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor --> <link rel="stylesheet" href="dist/css/light.css">
+    <!-- dark editor <link rel="stylesheet" href="lib/css/dark.css">-->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css">-->
+
+    <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'dist/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!-- If use the PDF print sheet so students can print slides-->
+
+    <link rel="stylesheet" href="dist/css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="dist/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <img src="dist/img/circle-gdi-logo.png" alt="GDI Logo" class="noborder" style="max-height:300px;">
+          <h1>Introduction to JavaScript</h1>
+          <!-- <h2>Class 1</h2> -->
+        </section>
+
+        <!-- INSTRUCTOR INTRODUCTION -->
+        <section>
+          <h3>Introductions!</h3><br>
+          <div class = "left-align">
+            <p style="font-size: 45px; text-align: center;">Tinuola "Tinu" Awopetu</p>
+            <p style="font-size: 45px; text-align: center;">UI-UX Developer</p>  
+          </div>
+        </section>
+
+        <!-- STUDENT INTRODUCTION -->
+        <section>
+          <h3>Introductions!</h3>
+          <div class = "left-align">
+          <ul>
+            <li>Your name?</li><br>
+            <li>"Zooming" from?</li><br>
+            <li>What would you like to get out of this class?</li><br>
+          </ul>
+          </div>
+        </section>
+
+        <!-- HOUSEKEEPING - PART ONE -->
+        <section>
+          <h3>Housekeeping</h3><br>
+          <div class = "left-align">
+          <ul>
+            <li>Display your preferred name and/or pronoun</li><br>
+            <li>We are here for you!</li><br>
+            <li>Every question is important</li><br>
+            <li>Participate / Experiment / Have fun</li><br>
+          </ul>
+          </div>
+        </section>
+
+        <!-- HOUSEKEEPING - PART TWO -->
+        <section>
+          <h3>Technical Housekeeping</h3><br>
+          <div class = "left-align">
+          <p>Rate your familiarity with HTML/CSS:</p><br>
+          <ol>
+            <li>No experience whatsoever</li><br>
+            <li>At least one introductory class</li><br>
+            <li>Basic familiarity and beyond</li>
+          </ol>
+          </div>
+        </section>
+
+        <section>
+          <h3>Technical Housekeeping</h3><br>
+          <div class = "left-align">
+          <p>Rate your familiarity with JavaScript:</p><br>
+          <ol>
+            <li>Complete beginner to JavaScript and programming in general</li><br>
+            <li>At least one introductory JavaScript class</li><br>
+            <li>Basic familiarity / Some video tutorials</li><br>
+            <li>Experienced in another programming language</li>
+          </ol>
+          </div>
+        </section>
+
+       <!-- GOALS -->
+       <section>
+        <h3>Goals</h3>
+        <div class = "left-align">
+          <ul>
+            <li>Code in JavaScript</li><br>
+            <li>Work with JavaScript in the DOM</li><br>
+            <li>Acquire resources / information for next steps</li>
+          </ul>
+      </section>
+
+        <!-- AGENDA -->
+        <section>
+          <h3>Agenda / Schedule</h3><br>
+          <div class = "left-align">
+          <ul>
+            <li>JavaScript and the Web</li><br>
+            <li>JavaScript Fundamentals</li><br>
+            <li>Stretch / "Bio" Break</li><br>
+            <li>JavaScript Fundamentals (contd)</li><br>
+            <li>JavaScript and the DOM</li><br>
+            <li>Q&A</li><br>
+          </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3>JavaScript and the Web</h3>
+        </section>
+
+        <!-- What is JavaScript-->
+        <section>
+          <h3>What is JavaScript?</h3>
+          <img src="dist/img/not-java.png" width="400px" alt="Java logo with a no symbol"/><br>
+          <p>JavaScript is not Java</p><br>
+          <p>Created by Brendan Eich as "LiveScript" in 1995, which got renamed to "JavaScript"</p>
+        </section>
+
+        <section>
+          <h3>JavaScript is the language of the web</h3>
+          <p>A <b>client-side processing language</b>. A browser reads the code and runs it directly.</p>
+          <img src="dist/img/client-server.jpg" alt="Laptop and server connected via the internet"/>
+          <p>
+            <small class="credit">Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h3>JavaScript works with HTML & CSS</h3>
+          <p>Lets you build dynamic webpages that respond to input from users.</p>
+          <img src="dist/img/html-css-js.jpg" width="400px" alt="HTML, CSS, JS image"/>
+          <!-- <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/ggunson/44539990/">Gillicious</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a> -->
+        </section>
+
+        <section>
+          <h3>What can JavaScript do?</h3>
+          <p>Interactive elements like tabs, sliders, etc</p>
+          <a href="https://gyazo.com/4841d6f99367b28a1d6fca4395f408a2"><img src="https://i.gyazo.com/4841d6f99367b28a1d6fca4395f408a2.gif" alt="https://gyazo.com/4841d6f99367b28a1d6fca4395f408a2"/></a>
+        </section>
+
+        <section>
+          <h3>What can JavaScript do?</h3>
+          <p>Image lightboxes</p>
+          <a href="https://gyazo.com/01b0065c2feee682dbffe3d7bf4e5545"><img src="https://i.gyazo.com/01b0065c2feee682dbffe3d7bf4e5545.gif" alt="https://gyazo.com/01b0065c2feee682dbffe3d7bf4e5545"/></a>
+        </section>
+
+        <section>
+          <h3>What can JavaScript do?</h3>
+          <p>Drawing & animation</p>
+          <a href="https://gyazo.com/6e183501f7ae5df7f07d37b9513ccfb9"><img src="https://i.gyazo.com/6e183501f7ae5df7f07d37b9513ccfb9.gif" alt="https://gyazo.com/6e183501f7ae5df7f07d37b9513ccfb9"/></a>
+        </section>
+
+        <section>
+          <h3>What can JavaScript do?</h3>
+          <p>Fully featured web applications</p>
+          <a href="https://gyazo.com/1ea0791eece706f4ab9ff8213a4e1fbf"><img src="https://i.gyazo.com/1ea0791eece706f4ab9ff8213a4e1fbf.gif" alt="https://gyazo.com/1ea0791eece706f4ab9ff8213a4e1fbf"/></a>
+        </section>
+
+        <section>
+          <h3>JavaScript is Everywhere</h3>
+          <img src="dist/img/js-popularity-03.png" alt=""/>
+          <small class="credit">How Popular is JavaScript in 2019? (Medium article, Eric Elliott)</small>
+        </section>
+
+        <section>
+          <h3>JavaScript Rules</h3>
+          <img src="dist/img/js-popularity-02.png" alt=""/>
+          <p class="credit">GitHub Top Languages Over Time</p>
+        </section>
+
+        <section>
+          <h3>JavaScript Fundamentals</h3>
+        </section>
+
+        <!-- TOOLS -->
+        <section>
+          <h3>Tools / Our Environment</h3>
+          <div class = "left-align">
+            <ul>
+              Browser:
+              <li>Chrome <em>(Recommended)</em></li>
+              <li>FireFox</li>
+            </ul><br><br>
+            <ul>
+              Text Editor:
+              <li>Visual Studio Code</li>
+              <li>Atom</li>
+              <li>Sublime Text</li>
+            </ul>
+            <br><br>OR<br><br>
+            <ul>
+              Web-based Coding Environment:
+              <li>REPL - repl.it <em>(Recommended)</em></li>
+              <li>JS Bin - jsbin.com</li>
+              <li>Codepen - Codepen.io</li>
+            </ul>
+          </div>
+        </section>
+
+         <!-- EDITOR -->
+         <section>
+          <h3>Choose Your Environment</h3><br>
+          <ul>
+            <li>If you have an editor:
+              <ol>
+                <li>Create and name a project folder</li>
+                <li>Open your editor and create a new file: <code>index.html</code></li>
+                <li>Save the file in your project folder</li>
+              </ol>
+            </li>
+            <br>OR<br><br>
+            <li>Go to repl.it
+              <ul>
+                <li>No signup needed</li>
+                <li>Click the blue "Start coding" button; select "HTML, CSS, JS"</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Using JavaScript -->
+        <section>
+          <h3>Script Tags</h3>
+          <p>You can mix JavaScript and HTML. The <b>script tag</b> tells your browser the stuff inside is code, not content.</p>
+<pre><code class="html">&lt;script&gt;
+  CODE GOES HERE
+&lt;/script&gt;
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3><br>
+          <ul>
+            <!-- <li>Make a folder called <code>gdi</code>.</li> -->
+            <!-- <li>Inside, make a new page called <code>index.html</code>.</li> -->
+            <li>Write this code inside <code>index.html</code></li><br>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Test Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
+    &lt;script&gt;
+      alert('Hello World!');
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<li>Open index.html in your browser</li>
+<br>
+Using REPL?
+<li>Type out the "p" and "script" tags and the content in them</li>
+<li>Click the "Run" button at the top of the page</li>
+        </section>
+
+        <section>
+          <h3>JavaScript Files</h3>
+          <p>Just like CSS, you can split a long block of JavaScript into its own file. </p>
+<pre><code class="html">&lt;script src="path/to/file.js"&gt;&lt;/script&gt;
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It!</h3><br>
+          <ul>
+            <li>Inside editor, create a new file <code>script.js</code> and save it to your project folder</li><br>
+            <li>In <code>index.html</code>, copy all the code between the script tags and paste the code to <code>script.js</code>. Save your script file</li><br>
+            <li>In <code>index.html</code>, delete the code between script tags; add a "src" attribute to the opening script tag and include the name/location of your script.js file as the src value:</li>
+            <pre><code class="html">&lt;script src="script.js"&gt;&lt;/script&gt;
+            </code></pre><br>
+            Using REPL?
+            <li>Copy the code between the script tags, paste the code to the <code>script.js</code> panel</li><br>
+            <li>Update the script tag in <code>index.html</code></li>
+          </ul>
+        </section>
+
+        <!-- Programming -->
+        <section>
+          <h3>Computers need simple, clear instructions</h3>
+          <img src="dist/img/confusedrobot.jpg" alt="Confused robot"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/baboon/3946055/" target="_blank">baboon</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
+          <h3>Thinking like a programmer</h3>
+          <p>Computers are great at <em>processing</em>. They are bad at <em>understanding</em>.</p>
+          <p>When you write a program, you must break down every step into simple pieces.</p>
+        </section>
+
+        <section>
+          <h3>Example: Draw a Square</h3>
+          <ol class="fragment">
+            <li>Find a whiteboard and a dry erase marker.</li>
+            <li>Uncap the dry erase maker.</li>
+            <li>Hold the marker in your hand.</li>
+            <li>Place the marker against the whiteboard.</li>
+            <li>Move your hand 1 foot to the right.</li>
+            <li>Stop.</li>
+            <li>Move your hand 1 foot down...</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Example: Make a Sandwich</h3>
+          <iframe title="Sandwich video" width="560" height="315" src="https://www.youtube.com/embed/XWe4iohhmIw" frameborder="0" allowfullscreen></iframe>
+          <p class="credit">Source: <a>Harvard Students Making Sandwich: CS 50 Algorithm Intro</a></p>
+        </section>
+
+        <section>
+          <h3>Basically, computers can be hard to work with!</h3>
+          <img src="dist/img/computer-toddler.jpg" alt="Toddler using old word processor"/>
+          <p class="credit">Photo credit: <a href="https://flic.kr/p/5Uvapm" target="_blank">Dan Hatton</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
+
+          <aside class="notes">Reassure the students! Coding is difficult, and it may take time to get good at it. Also, the natural state of code is broken. It's normal to have error messages, </aside>
+        </section>
+
+        <!-- JavaScript Basics -->
+        <section>
+          <h3>So what's up with JavaScript?</h3>
+          <img src="dist/img/gears.jpg" alt="Gears"/>
+          <p class="credit">Photo credit: <a href="https://flic.kr/p/EEo4BV" target="_blank">Adam Foster</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
+          <h3>How does JavaScript work?</h3><br>
+          <div class="left-align">
+            <ol>
+              <li>You visit a website with JavaScript code on it.</li><br>
+              <li>Your browser (e.g., Chrome) reads the code line-by-line.</li><br>
+              <li>The browser runs each line of code as it reads it.</li><br>
+              <li>Based on these instructions, the browser performs calculations and changes the HTML and CSS on the page.</li><br>
+              <li>If the browser finds code it doesn't understand, it stops running and creates an error message.</li>
+            </ol>
+          </div>
+        </section>
+
+        <section>
+          <h3>Console</h3>
+          <p>You can see what's going on in the <b>console</b>.</p>
+          <img src="dist/img/console-panel.png">
+        </section>
+
+        <section>
+          <h3>Console</h3><br>
+          <ul>
+            <li>JS environment in your browser</li><br>
+            <li>Available in all browsers (Developer Tools)</li><br>
+            <li>Allows you to test and debug code; check code output</li><br>
+            <li>You can write JS in the console</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3><br>
+          <ul>
+            <li>Open your practice page.</li><br>
+            <li>Open the console.</li><br>
+            <li>In Chrome, use the keyboard shortcut:
+              <ul>
+                <li>Mac: <strong>Command + Option + J</strong></li>
+                <li>Windows: <strong>Control + Shift + J</strong></li>
+              </ul>
+            </li><br>
+            <li>Do you see anything in the console?</li><br>
+            <li>Try typing a console.log command and hitting enter: </li><pre><code class="javascript">console.log('Hello World!');
+              </code></pre>
+            <li>Try typing in 2 + 2 in the console and hitting enter.</li><br>
+          </ul>
+        </section>
+
+        <!-- Using JavaScript -->
+        <section>
+          <h3>Statements</h3>
+          <p>Each instruction in JS is a "statement":</p>
+<pre><code class="javascript">console.log('Hello World!');
+console.log('I am glad to meet you');
+console.log('I am fuzzy');
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Comments</h3>
+          <p>You can leave comments in your code&mdash;notes that people can read but computers will ignore.</p>
+<pre><code class="javascript">/*
+I can make long comments
+with multiple lines here
+*/
+
+console.log('Hello World!'); // Or make short comments here</code></pre>
+        </section>
+
+        <section>
+          <h3>Getting results onto your screen</h3><br>
+          <p>Open a popup box.</p>
+<pre><code class="javascript">alert('Hello World!');
+</code></pre><br>
+          <p>Display a message in your console.</p>
+<pre><code class="javascript">console.log('Hello World!');
+</code></pre><br>
+          <p>Add something to the page.</p>
+<pre><code class="javascript">document.write('Hello World!');
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3><br>
+          <ul>
+            <li>Open <code>script.js</code>.</li><br>
+            <li>Add a comment to your code or disable a line of code.</li><br>
+            <li>Change the <code>alert</code> message</li><br>
+            <li>Add a <code>console.log</code> message and check it in the console</li><br>
+            <li>Print a message to the page with <code>document.write</code></li><br>
+          </ul>
+        </section>
+
+      <!-- Variables -->
+        <section>
+          <h3>Variables</h3><br>
+          <p>A variable is a named container for a value that can change.</p>
+          <p>We use variables to store or hold values.</p>
+          <img src="dist/img/empty-glass.jpg" alt="Empty glass" class="noborder"/>
+          <p class="credit">
+            <small>Photo credit: <a href="http://www.flickr.com/photos/giuliag/3570562404/" target="_blank">giulia gasparro</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h3>Declaring a Variable</h3><br>
+          <p>To declare (create) a variable, just type the word <code>let</code> and the variable name.</p>
+<pre><code class="javascript">let numberOfKittens;</code></pre><br>
+          <p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
+<pre><code class="javascript">let numberOfKittens = 5;</code></pre>
+        </section>
+
+        <section>
+          <h3>Variable Values</h3><br>
+          <ul>
+            <li>When you first create a variable, it does not have a value (it is <code>undefined</code>).</li><br>
+            <li>You can set a value for a variable.</li><br>
+            <li>Variables can hold different types of data.</li><br>
+            <li>The value of a variable can change over time.</li><br>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Naming Variables</h3><br>
+          <ul>
+            <li>The variable name is case-sensitive.</li><br>
+            <li>A new variable should have a unique name.</li><br>
+            <li>Variable names need to start with a letter, <code>$</code>, or <code>_</code>.</li><br>
+            <li>Avoid <a href="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words">reserved words</a>.</li><br>
+            <li>Choose clarity and meaning for humans to read later.</li><br>
+            <li>More than a word in a name? Use camelCase.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Using a Variable</h3><br>
+          <p>Once you have created a variable, you can use it in your code. Just type the name of the variable.</p>
+<pre><code class="javascript">let numberOfKittens = 5;
+console.log(numberOfKittens);
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>In your JavaScript file, create a variable and give it a valid name and value. Then, display the value.</p>
+        </section>
+
+        <!-- Data Types-->
+        <section>
+          <h3>Data Types</h3>
+          <ul>
+            <li><b>string</b>: string of characters
+              <pre><code class="javascript">let userName = 'Jane Lane';</code></pre>
+            </li>
+            <li><b>number</b>: integer or floating points <!--or floating point-->
+              <pre><code class="javascript">let myAge = 30;</code></pre>
+            </li>
+            <li><b>boolean</b>: true or false
+              <pre><code class="javascript">let catsAreBest = true;</code></pre>
+            </li><br>
+            <li>Others: undefined, null, array, object, function
+            </li>
+          </ul>
+        </section>
+
+      <!-- Numbers-->
+        <section>
+          <h3>Numbers!</h3>
+          <img src="dist/img/kitten-basket.jpg" alt="Cats in a basket"/>
+          <p class="credit">
+            <small>Photo credit: <a href="http://www.flickr.com/photos/tom-poes/2159348460/" target="_blank">WJ van den Eijkhof</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h3>Numbers</h3>
+          <p>Variables can be numbers, either integers or floats (decimals).</p>
+<pre><code class="javascript">let numberOfKittens = 5;
+let cutenessRating = 9.6;
+</code></pre>
+          <!-- <p>JavaScript automatically converts integers to floats</p>
+          <p><code>NaN</code> = Not-A-Number</p> -->
+        </section>
+
+        <section>
+          <h3>Arithmetic Operators</h3>
+          <p>Once you have numbers, you can do math with them!</p>
+<pre><code class="javascript">let numberOfKittens = 5;
+let numberOfPuppies = 4;
+let numberOfAnimals = numberOfKittens + numberOfPuppies;
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Arithmetic Operators</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Example</th>
+                <th>Name</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>-a</code></td>
+                <td> Negation</td>
+                <td>Opposite of <code>a</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a + b</code></td>
+                <td>Addition</td>
+                <td>Sum of <code>a</code> and <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a - b</code></td>
+                <td>Subtraction</td>
+                <td>Difference of <code>a</code> and <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a * b</code></td>
+                <td>Multiplication</td>
+                <td>Product of <code>a</code> and <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a / b</code></td>
+                <td>Division</td>
+                <td>Quotient of <code>a</code> and <code>b</code>.</td>
+              </tr>
+              <tr>
+                <td><code>a % b</code></td>
+                <td>Modulus</td>
+                <td>Remainder of <code>a</code> divided by <code>b</code>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3><br>
+          <p>Create two variables and try some arithmetic operators.</p> <br>
+            <p>Don't forget to display your results!</p>
+        </section>
+      </section>
+
+      <!-- Strings -->
+        <section>
+          <h3>Strings</h3>
+          <p>Variables can be strings (groups of characters). You put your string in single or double quotes.</p>
+<pre><code class="javascript">let kittensName = 'Fluffy';</code></pre><br>
+          <p>If you want to use a quote in your string, you'll need to <b>escape</b> it with a backslash.</p>
+<pre><code class="javascript">console.log('I\'d like to use an apostrophe');</code></pre>
+        </section>
+
+        <section>
+          <h3>Playing with Strings</h3>
+          <img src="dist/img/kitten-string.jpg" alt="Cat playing with string"/>
+          <p class="credit">
+            <small>Photo credit: <a href="http://www.flickr.com/photos/dirtbikedba/5796961878/" target="_blank">Mike Lawson</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h3>String Operators</h3>
+          <p>You can put strings together with a <code>+</code>, the concatenation operator.</p>
+          <pre><code class="javascript">let kittensName = 'Fluffy ';
+let fullName = kittensName + 'McDougle';
+console.log(fullName); // Outputs 'Fluffy McDougle'
+</code></pre>
+        </section>
+
+        <!-- <section>
+          <h3>String Operators</h3>
+          <p>You can also use <code>+=</code> to add things to the end of a string.</p>
+<pre><code class="javascript">var kittensName = 'Admiral ';
+kittensName += 'Snuggles';
+console.log(kittensName); // Outputs 'Admiral Snuggles'
+</code></pre>
+        </section> -->
+
+        <section>
+          <h3>Concatenate!</h3>
+          <img src="dist/img/concatenate.jpg" alt="Cat jumping on another cat."/>
+          <p class="credit">
+            <small>Photo credit: <a href="http://www.flickr.com/photos/furlined/8191032061/" target="_blank">Matt</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3><br>
+          <p>Create two variables, a first name and a last name, and then put them together to make a full name.</p><br>
+          <p>Don't forget to display your results!</p>
+        </section>
+
+        <section>
+          <h3>Combining strings and numbers</h3>
+          <p>You can use concatenation to mix strings and numbers. When you do this, JavaScript will treat the number like a string.</p>
+<pre><code class="javascript">let numberOfFruit = 6;
+let typeOfFruit = 'bananas';
+let allTheFruit = 'I have ' + numberOfFruit + ' ' + typeOfFruit + '!';
+console.log(allTheFruit);
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3><br>
+          <p>Create a program to calculate the tip at a restaurant. It should:</p>
+          <ul>
+            <li>Have variables for the bill <b>pre-tip</b> and the <b>tip percentage</b>.</li><br>
+            <li>Calculate the total bill.</li><br>
+            <li>Output a sentence like "Your total bill, with tip, is $14.75".</li><br>
+            <li>Bonus: Use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed" target="_blank"><code>toFixed()</code></a> to round the bill total to 2 decimals.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Variables and User Inputs</h3>
+          <p>Variables can also store input from users</p>
+<pre><code class="javascript">let name = prompt("What's your name?");
+console.log('Hello' + name);
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3><br>
+          <p>Create a program that prompts users for their name and age, calculates and prints their birth year. It should:</p><br>
+          <ul>
+            <li>Have variables for the name and age.</li><br>
+            <li>Calculate and store the birth year in a variable.</li><br>
+            <li>Output a sentence such as: "Hi Linda. You were born in 1980."</li><br>
+          </ul>
+        </section>
+
+        <!-- DOM -->
+        <section>
+          <h2>JavaScript and the DOM</h2>
+        </section>
+
+        <!-- WHAT IS THE DOM -->
+        <section>
+          <h2>What is the DOM?</h2><br>
+          <p>DOM stands for Document Object Model</p><br>
+          <p>A map of our HTML Document</p><br>
+          <p>Anything found in an HTML document can be accessed, changed, deleted, or added by a developer using the DOM</p><br>
+          <img src="dist/img/dom-tree.png" alt="">
+        </section>
+
+        <!-- INSPECTING THE DOM -->
+        <section>
+          <h2>Inspecting the DOM</h2><br>
+          <p>Right-click on a web page and select "Inspect Element"</p><br>
+          <p>Shortcuts: Cmd-Opt-I (Mac), Ctrl-Shift-I (Windows)</p>
+        </section>
+
+        <!-- ACCESSING THE DOM -->
+        <section>
+          <h2>Accessing the DOM</h2><br>
+          <p>The <code><a href="https://developer.mozilla.org/en/DOM/document">document</code></a> object is globally available in your browser.</p>
+          <p>It allows you to access and manipulate the DOM of the current web page:</p>
+          <ol>
+            <li>Find the DOM node you want to change using an access method</li><br>
+            <li>Store this DOM node as a variable</li><br>
+            <li>Manipulate the DOM node
+              <ul style="margin-top: 0;">
+                <li>Change its attributes</li>
+                <li>Modify its styles</li>
+                <li>Give it new inner HTML</li>
+                <li>Append new nodes to it</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+
+        <!-- DOM ACCESS METHODS -->
+        <section>
+          <h2>DOM Access Methods</h2>
+          
+            <br>
+            <p>Finding DOM nodes by id:</p>
+    <pre><code class="javascript syntax">document.getElementById(id);
+    </code></pre>
+            <p>Finding DOM nodes by tag name:</p>
+    <pre><code class="javascript syntax">document.getElementsByTagName(tagName);
+    </code></pre>
+            <p>Finding DOM nodes by class name:</p>
+    <pre><code class="javascript syntax">document.getElementsByClassName(className);
+    </code></pre>
+            <p>Finding DOM nodes by query selector:</p>
+    <pre><code class="javascript syntax">document.querySelector(cssQuery);
+    document.querySelectorAll(cssQuery);
+    </code></pre>
+          
+        <!-- SELECTING DOM NODES -->
+        </section>
+        <section>
+          <h2>Selecting Nodes From the DOM</h2>
+          
+            <p>HTML:</p>
+    <pre><code class="html xml">&lt;ul id="hobby-list"&gt;
+      &lt;li class=&quot;hobby&quot;&gt;Playing the banjo&lt;/li&gt;
+      &lt;li class=&quot;hobby&quot;&gt;Paddleboarding&lt;/li&gt;
+    &lt;/ul&gt;
+    </code></pre>
+            <p>JavaScript:</p>
+    <pre><code class="javascript">// By Id
+    var hobbiesList = document.getElementById('hobby-list');
+    
+    // By Tag Name
+    var hobbies = document.getElementsByTagName('li');
+    
+    // By Class Name
+    var alsoHobbies = document.getElementsByClassName('hobby');
+    
+    // By CSS Query
+    var firstHobby = document.querySelector('ul li.hobby');
+    var againAlsoHobbies = document.querySelectorAll('ul li.hobby');
+    </code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3><br>
+          <p>We're going to practice manipulating the DOM.</p>
+          
+        </section>
+
+      <!-- Final slides-->
+        <section>
+          <h3>You did it!</h3>
+          <img src="dist/img/celebration.jpg" alt="People celebrating"/>
+          <p class="credit">
+            <small>Photo credit: <a href="http://www.flickr.com/photos/morphomir/2407451929/" target="_blank">Mircea</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">cc</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h2>Q&A</h2>
+        </section>
+
+        <section>
+          <h3>GDI Resources</h3>
+          <p>Upcoming GIRL DEVELOP IT classes:</p>
+          <p>Front End Development Cohort</p><br>
+          <h3>Other Resources</h3>
+            <ul>
+              <!-- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li><br>
+              <li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li><br> -->
+              <!-- <li><a href="http://jsforcats.com/">JavaScript For Cats,</a> the basics of JavaScript explained with extra cats.</li> -->
+              <li>Mozilla Developer Network (MDN)</li>
+              <li>Codecademy</li>
+              <li>Free Code Camp</li>
+              <li>Udemy courses</li>
+            </ul><br><br>
+            <h3>Contact</h3>
+          Tinuola Awopetu <br>
+          (<a href="https://www.linkedin.com/in/tinuolaawopetu/" target="_blank">LinkedIn</a>, <a href="https://github.com/tinuola">github.com/tinuola</a>)
+
+        </section>
+
+    </div>
+    <footer>
+      <div class="copyright">
+        Intro to JavaScript &mdash; Girl Develop It &mdash;
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+      </div>
+    </footer>
+  </div>
+
+    <script src="dist/js/head.min.js"></script>
+    <script src="dist/js/reveal.min.js"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+
+  </body>
+</html>
