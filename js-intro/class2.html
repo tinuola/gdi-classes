@@ -49,6 +49,19 @@
           <h2>Class 2</h2>
         </section>
 
+      <!-- INSTRUCTOR INTRODUCTION -->
+      <section>
+        <h3>Who We Are</h3><br>
+        <div class = "left-align">
+          <p style="font-size: 45px; text-align: center;">Tinuola "Tinu" Awopetu</p><br>
+          <p style="font-size: 45px; text-align: center;">Anne Katzeff</p> 
+          <br>
+          <p style="font-size: 45px; text-align: center;">Ebony Rawlinson</p> 
+          <br>
+          <p style="font-size: 45px; text-align: center;">Santhi Sri Jamisetty</p>
+        </div>
+      </section>
+
       <!-- AGENDA -->
       <section>
         <h3>Agenda</h3><br>
@@ -57,11 +70,13 @@
             <li>Review</li><br>
             <li>JavaScript Fundamentals (contd)</li><br>
             <ul>
+
               <li>Functions</li><br>
               <li>Control Flow</li><br>
+              <li>JavaScript and the DOM</li><br>
             </ul>
             <li>Stretch / "Bio" Break</li><br>
-            <li>JavaScript and the DOM</li><br>
+            <li>Build a Web Application</li><br>
             <li>Q&A</li>
           </ul>
         </div>
@@ -104,13 +119,20 @@
           <ul>
             <li>JavaScript Fundamentals</li><br>
               <ul>
-                <li>Working in the JS console</li><br>
-                <li>Displaying output on the screen</li><br>
-                <li>Commenting code</li><br>
+                <li>Worked in the JS console</li><br>
+                <li>Displayed output on the screen</li><br>
+                <li>Commented code</li><br>
                 <li>Variables & Data Types</li><br>
-                <li>Concatenation</li><br>
-                <li>Storing user input</li><br>
-                <li>Wrote two sample programs!</li>
+                <li>Combining strings and numbers 
+                  <ul>
+                    <li>Concatenation (using + operator)</li>
+                    <li>String interpolation (using ``)</li>
+                  </ul>
+                </li><br>
+                <li>Created a Tip Calculator</li><br>
+                <li>Worked with an (online) editor</li>
+                <!-- <li>Storing user input</li><br>
+                <li>Wrote two sample programs!</li> -->
               </ul>
           </ul>
         </section>
@@ -118,11 +140,21 @@
           <h3>Class 1 Review</h3><br>
           <p>What are three JavaScript statements we can use to output information to the screen?</p>
         </section>
+
         <section>
           <h3>Class 1 Review</h3><br>
+          <p>What does a variable do?</p><br>
           <p>How do we declare a variable?</p>
         </section>
+
         <section>
+          <h3>Class 1 Review</h3><br>
+          <p>What are two data types we've worked with?</p>
+        </section>
+
+
+
+        <!-- <section>
           <h3>Code Search</h3>
           <br />
           <p>In this code, spot the comment, variables, operators and print/display method.</p>
@@ -136,7 +168,7 @@ let receipt = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
 
 console.log(receipt);
 </code></pre>
-        </section>
+        </section> -->
 
         <!-- Functions -->
         <section>
@@ -165,7 +197,7 @@ console.log(receipt);
 }
 </code></pre>
           <br />
-          <p>Functions can have multiple lines.</p>
+          <!-- <p>Functions can have multiple lines.</p> -->
         </section>
 
         <section>
@@ -179,10 +211,10 @@ console.log(receipt);
         </section>
 
         <section>
-          <h3>What's going on here?</h3>
+          <h3>Functions</h3>
           <br />
           <p>
-            A function is a group of code you can reuse many times. Whenever you invoke a function by using it's name,
+            A function is a group of code you can reuse many times.</p><br> <p>Whenever you invoke a function by using it's name, 
             you tell the browser to run the code inside the function.
           </p>
           <br />
@@ -194,7 +226,24 @@ console.log(receipt);
           <h3>Let's Develop It</h3>
           <br />
           <p>Write (declare) a function that outputs a sentence.</p><br>
-          <p>Then use (invoke) that function in your code.</p>
+          <p>Then call (invoke) that function.</p>
+        </section>
+
+        <!-- Arguments -->
+        <section>
+          <h3>Arguments</h3>
+          <br />
+          <p>You can declare and work with variables inside a function.</p>
+          <br />
+    <pre><code class="javascript">
+    function displayFullName(){
+      let firstName = 'Kamala';
+      let lastName = 'Harris'
+      console.log(firstName + ' ' + lastName);
+    }
+
+    displayFullName();
+  </code></pre>
         </section>
 
         <!-- Arguments -->
@@ -209,24 +258,36 @@ console.log(receipt);
 }
 
 callKitten('Fluffy'); // outputs 'Come here, Fluffy!'
+</code></pre>
 
-function addNumbers(a, b){
+<!-- function addNumbers(a, b){
   console.log(a + b);
 }
 
 addNumbers(5, 7);  // outputs 12
-addNumbers(9, 12); // outputs 21
-</code></pre>
+addNumbers(9, 12); // outputs 21 -->
         </section>
+
+  <!-- PRACTICE -->
+  <section>
+    <h3>Let's Develop It</h3>
+    <br />
+    <p>Write (declare) a function that accepts two or more arguments.</p><br>
+    <p>Make your function do something: add numbers, display a sentence, etc.</p><br>
+    <p>Then call (invoke) that function.</p>
+  </section>
+
+
 
         <section>
           <h3>Arguments</h3>
           <br />
           <p>
-            You can also pass <code>variables</code> into functions.</p><br>
-          <p>These variables do not need to have the same name
+            You can also <code>pass</code> variables into functions.</p><br>
+          <!-- <p>These variables do not need to have the same name
             as the function arguments.
-          </p><br>
+          </p> -->
+          <br>
           <pre><code class="javascript">function addOne(num){
   let newNumber = num + 1;
   console.log('You now have ' + newNumber);
@@ -243,7 +304,7 @@ addOne(numberOfPuppies);
         </section>
 
         <!-- PRACTICE -->
-        <section>
+        <!-- <section>
           <h3>Let's Develop It</h3>
           <br />
           <p>Write a simple program to combine a first name and a last name inside a function.</p>
@@ -251,7 +312,7 @@ addOne(numberOfPuppies);
           <p>The function accepts a first and last name as arguments.</p><br>
           <p>Run the function.</p>
 
-        </section>
+        </section> -->
 
         <!-- returning values -->
         <section>
@@ -515,9 +576,9 @@ if (age &gt;= 35) {
           <h3>Let's Develop It</h3>
           <p>Modify your "wear a coat" code for these conditions:</p>
           <ol>
-            <li>If it's less than 50 degrees, wear a coat.</li>
-            <li>If it's less than 30 degrees, wear a coat and a hat.</li>
-            <li>If it's less than 0 degrees, stay inside.</li>
+            <li>If it's less than 60 degrees, wear a jacket.</li>
+            <li>If it's less than 45 degrees, wear a coat and a hat.</li>
+            <!-- <li>If it's less than 0 degrees, stay inside.</li> -->
             <li>Otherwise, wear whatever you want.</li>
           </ol>
         </section>
@@ -683,12 +744,22 @@ if (age &gt;=30 &amp;&amp; yearsAsCitizen &gt; 9) {
       <!-- PRACTICE -->
       <section>
         <h3>Let's Develop It</h3><br>
-        <p>We're going to practice manipulating the DOM.</p>
+        <p>We're going to work with the DOM and
+        <p>use everything we've learned up till now:</p>
+        <br>
+        <ul>
+          <li>Variables</li>
+          <li>Data types</li>
+          <li>Functions</li>
+          <li>Console.log statements</li>
+          <li>Control Flow</li>
+        </ul><br><br>
+        <p>And learn about a few new things to....</p>
       </section>
 
       <section>
         <h3>Dragon Defeater</h3><br>
-        <p>Our First JavaScript Web Application!</p>
+        <p>Build Our First JavaScript Web Application!</p>
       </section>
 
         <!-- Final slides-->
@@ -702,13 +773,14 @@ if (age &gt;=30 &amp;&amp; yearsAsCitizen &gt; 9) {
 
         <section>
           <h3>Give Us Your Feedback</h3>
-          <p><a href="https://forms.gle/EU82SVF3tiThQGSU8" target="blank">https://forms.gle/EU82SVF3tiThQGSU8</a></p>
+          <p><a href="https://forms.gle/Fknnz7DaRk8TqrPw6" target="blank">https://forms.gle/Fknnz7DaRk8TqrPw6</a></p>
         </section>
 
         <section>
-          <h3>Upcoming GDI classes</h3>
+          <h3>Upcoming GDI classes</h3><br>
           <p>FrontEnd Fundamentals I Cohort</p><br>
-          <p>JavaScript Cohort</p><br>
+          <p>JavaScript Fundamentals I Cohort</p><br>
+          <p>Intro to Python</p><br>
           <p>Python I Cohort</p><br>
           <p>Intro to Git</p><br>
           <p>CSS Frameworks: Bootstrap</p><br>
@@ -716,24 +788,27 @@ if (age &gt;=30 &amp;&amp; yearsAsCitizen &gt; 9) {
         </section>
 
         <section>
-          <h3>External Resources</h3>
+          <h3>External Resources</h3><br>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-              <li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
-              <li>Codecademy</li>
-              <li>Free Code Camp</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li><br>
+              <li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li><br>
+              <li>Codecademy</li><br>
+              <li>Free Code Camp</li><br>
               <li>Udemy courses</li>
             </ul>
         </section>
 
         <!-- Q & A / CONTACT -->
         <section>
-          <h3>Contact</h3>
+          <h3>Contact</h3><br>
           <p>Tinuola Awopetu, <a href="https://www.linkedin.com/in/tinuolaawopetu/" target="_blank">LinkedIn</a></p>
           <br>
-          <p>Anne Katzeff</p><br>
-          <p>Ebony Rawlinson</p><br>
-          <p>Santhi Sri Jarnisetty</p>
+          <p>Anne Katzeff, <a href="https://www.linkedin.com/in/annekatzeff/" target="_blank">LinkedIn</a></p>
+          <p>www.askdesign.biz</p>
+          <p>anne@askdesign.biz</p>
+          <br>
+          <p>Ebony Rawlinson</p>
+          <p>erawlinson03@gmail.com</p>
         </section>
 
       </div> <!-- Close slides -->
